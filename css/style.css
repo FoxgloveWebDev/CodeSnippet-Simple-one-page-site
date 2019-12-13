@@ -220,16 +220,53 @@ header {
 	-webkit-justify-content: center;
 	-ms-flex-pack: center;
 	justify-content: center;
-    width: 100%%;
+    width: 100%;
 	height: 100vh;
-    background-image: url("../img/happydog.jpg");
+	background-image: url("../img/happydog.jpg");
+	background-repeat: no-repeat;
     background-size: 100%;
-    /**background: #e55d87;
+
+	/*background: #e55d87;
 	background: -moz-linear-gradient(-45deg, #e55d87 0%, #5fc3e4 100%);
 	background: -webkit-linear-gradient(-45deg, #e55d87 0%, #5fc3e4 100%);
 	background: linear-gradient(135deg, #e55d87 0%, #5fc3e4 100%);
  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e55d87', endColorstr='#5fc3e4', GradientType=1 );*/
+ 
 }
+
+span {
+	font: 700 1.5em "Oswald", sans-serif;
+	letter-spacing: 0;
+	padding: .25em 0 .325em;
+  display: block;
+  margin: 0 auto;
+	text-shadow: 0 0 80px rgba(255,255,255,.5);
+
+
+/* Clip Background Image */
+  background: url(https://c.pxhere.com/images/ee/ff/a0d9fee0dabb1342239fed8b2335-1450571.jpg!d) repeat-y;
+  -webkit-background-clip: text;
+  background-clip: text;
+
+/* Animate Background Image */
+  -webkit-text-fill-color: transparent;
+  -webkit-animation: aitf 80s linear infinite;
+
+/* Activate hardware acceleration for smoother animations */
+  -webkit-transform: translate3d(0,0,0);
+  -webkit-backface-visibility: hidden;
+
+}
+
+/* Animate Background Image */
+
+@-webkit-keyframes aitf {
+	0% { background-position: 0% 50%; }
+	100% { background-position: 100% 50%; }
+}
+
+
+
 .title {
 	-webkit-align-self: center;
 	-ms-flex-item-align: center;
@@ -248,21 +285,24 @@ header {
 }
 .title h1 {
 	font-size: 80px;
-	font-weight: 300;
+	font-weight: 400;
 	text-transform: uppercase;
 	line-height: 0.85;
 	margin-bottom: 28px;
 	margin: 0;
 	padding: 0;
 	color: #FFFFFF;
+	
+
 }
 .title h2 {
-	color: #FFFFFF;
-	font-size: 16px;
-	font-weight: 400;
+	color: #89b6e6;
+	font-size: 2em;
+	text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+	font-weight: bolder;
 	text-transform: uppercase;
 	letter-spacing: 5px;
-	margin-top: 50px;
+	margin-top: 10px;
 }
 
 @media only screen and (max-height: 700px) {
